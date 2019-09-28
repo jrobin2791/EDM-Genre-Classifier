@@ -1,7 +1,6 @@
 # Imports
 import os
 import sys
-import json
 import spotipy
 import spotipy.util as util
 import pandas as pd
