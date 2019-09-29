@@ -183,3 +183,5 @@ val = pd.DataFrame(spotifyObject.audio_features(val_dict.keys()))
 val['genre'] = val_dict.values()
 # Save the dataframe as a csv file
 val.to_csv('data/val.csv', index=False)
+# Erase cache
+os.remove(f'.cache-{username}')

@@ -152,8 +152,12 @@ while True:
         # Use the model to make a prediction
         print(model.predict(track_data)[0].upper())
         
+    # Account for invalid entries in the welcome prompt
     elif choice != '2':
         print("Please enter 1 or 2.")
-        
+    
+    # Exit the program
     else:
+        # Erase cache
+        os.remove(f'.cache-{username}')
         break
